@@ -1,37 +1,22 @@
-"use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const inquirer_1 = __importDefault(require("inquirer"));
-const chalk_1 = __importDefault(require("chalk"));
-function startCalculator() {
-    return __awaiter(this, void 0, void 0, function* () {
-        let c_animation = chalk_1.default.green("Let's get Started");
-        console.log(c_animation);
-    });
+//packages
+import inquirer from "inquirer";
+import chalk from "chalk";
+async function startCalculator() {
+    let c_animation = chalk.green("Let's get Started");
+    console.log(c_animation);
 }
 startCalculator();
-let user_input1 = await inquirer_1.default.prompt({
+let user_input1 = await inquirer.prompt({
     type: "number",
     name: "number1",
     message: "Enter your first number",
 });
-let user_input2 = await inquirer_1.default.prompt({
+let user_input2 = await inquirer.prompt({
     type: "number",
     name: "number2",
     message: "Enter your second number",
 });
-let user_input3 = await inquirer_1.default.prompt({
+let user_input3 = await inquirer.prompt({
     type: "list",
     name: "operator",
     message: "enter your operator",
