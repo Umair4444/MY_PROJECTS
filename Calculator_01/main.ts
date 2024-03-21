@@ -3,7 +3,7 @@ import chalk from "chalk";
 import chalkAnimation from "chalk-animation";
 
 async function startCalculator() {
-   let c_animation = chalk.green("Let's get Started");
+  let c_animation = chalk.green("Let's get Started");
   console.log(c_animation);
 }
 
