@@ -1,7 +1,7 @@
 {
   "name": "cal_by_umair",
   "version": "1.0.2",
-  "description": "My first animated calculator",
+  "description": "My first animated  CLI calculator",
   "main": "index.js",
   "type": "module",
   "bin": "main.js",

@@ -18,7 +18,7 @@ async function welcome() {
   await sleep();
   welcome_title.stop();
   console.log(
-    chalk.green(` _____________________
+    chalk.green(`   _____________________
   |  _________________  |
   | |   CALCCULATOR   | |
   | |_________________| |
@@ -31,7 +31,7 @@ async function welcome() {
   | |___|___|___| |___| |
   | | . | 0 | = | | / | |
   | |___|___|___| |___| |
-  |_____________________|`)
+  |_____________________|\n`)
   );
   console.log(
     chalk.green(`██████╗ ███████╗██╗   ██╗███████╗██╗      ██████╗ ██████╗     ██████╗ ██╗   ██╗    ██╗   ██╗███╗   ███╗ █████╗ ██╗██████╗
@@ -99,8 +99,24 @@ async function ask_question() {
         console.log(chalk.red(operation.number1 ** 2));
       } else if (operation.operator === "cube") {
         console.log(chalk.blue(operation.number1 ** 3));
-        // } else if (operation.operator === "prime number") {
-        //   console.log(operation.number1 + operation.number2);
+      } else if (operation.operator === "prime number") {
+        if (operation.number1 < 2) {
+          console.log("Not a Prime Number");
+        } else {
+          let prime = true;
+
+          for (let i = 2; i < Math.sqrt(operation.number1); i++) {
+            if (operation.number1 % i === 0) {
+              prime = false;
+              break;
+            }
+          }
+          if (prime) {
+            console.log("It is a Prime Number");
+          } else {
+            console.log("Not a Prime Number");
+          }
+        }
       } else if (operation.operator === "even or odd") {
         if (operation.number1 % 2 == 0) {
           console.log(chalk.inverse("It is even"));
