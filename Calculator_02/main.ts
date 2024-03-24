@@ -43,8 +43,6 @@ async function welcome() {
   );
 }
 
-// welcome();
-
 async function ask_question() {
   await inquirer
     .prompt([
@@ -74,7 +72,6 @@ async function ask_question() {
       { type: "number", name: "number2", message: "Enter Your second Number" }, // it will ask for input # 2
     ])
     .then((operation) => {
-      // console.log(operation);
       if (operation.operator === "addition") {
         console.log(chalk.green(operation.number1 + operation.number2));
       } else if (operation.operator === "substraction") {
@@ -126,9 +123,6 @@ async function ask_question() {
       }
     });
 }
-
-// ask_question();
-
 async function start_again() {
   do {
     await ask_question();
@@ -142,13 +136,11 @@ async function start_again() {
     again.restart == "Y" ||
     again.restart == "yes" ||
     again.restart == "YES"
+    
   );
 }
-// start_again();
-
 async function initialize() {
   await welcome();
-  // await ask_question() // it will ask question second in a row without asking for y or n
   await start_again();
 }
 
