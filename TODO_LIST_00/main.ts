@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import inquirer from "inquirer";
 import chalk from "chalk";
 import chalkAnimation from "chalk-animation";
@@ -18,7 +20,10 @@ async function Welcome() {
   await sleep();
   title.stop();
   console.log(
-    chalk.bgWhite.black("Here you will only wish you had these items")
+    chalk.bgWhite.black(`     ^ ^                                                 
+    (O,O)                                                
+    (   ) Here you will only wish you had these items    
+    -"-"-------------------------------------------------`)
   );
   // condition = false;
 }
@@ -37,7 +42,7 @@ async function todo() {
   let todo_Options = await inquirer.prompt({
     name: "Options",
     type: "list",
-    message: "Please select an Otion from below : ",
+    message: "Please select an Option from below : ",
     choices: ["Add", "Delete", "Update", "View", "Exit"],
   });
   if (todo_Options.Options === "Add") {
@@ -45,7 +50,7 @@ async function todo() {
   } else if (todo_Options.Options === "View") {
     await view_Task();
   } else if (todo_Options.Options === "Exit") {
-    console.log("Please come back for more shopping");
+    console.log(chalk.blue("Please come back for more shopping"));
     condition = false;
   } else if (todo_Options.Options === "Delete") {
     await delete_Task();

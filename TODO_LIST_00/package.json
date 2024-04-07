@@ -1,9 +1,10 @@
 {
-  "name": "todo_list_00",
-  "version": "1.0.0",
-  "description": "",
+  "name": "todo_list_by_umair",
+  "version": "1.0.3",
+  "description": "Command line program for shopping",
   "main": "index.js",
   "type": "module",
+  "bin": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

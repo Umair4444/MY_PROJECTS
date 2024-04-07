@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
 import chalkAnimation from "chalk-animation";
@@ -14,7 +15,10 @@ async function Welcome() {
     let title = chalkAnimation.rainbow("Welcome to Dhokabaaz Store", 2500);
     await sleep();
     title.stop();
-    console.log(chalk.bgWhite.black("Here you will only wish you had these items"));
+    console.log(chalk.bgWhite.black(`     ^ ^                                                 
+    (O,O)                                                
+    (   ) Here you will only wish you had these items    
+    -"-"-------------------------------------------------`));
     // condition = false;
 }
 async function my_Todo() {
@@ -22,7 +26,7 @@ async function my_Todo() {
         await todo();
     }
 }
-async function program() {
+async function store() {
     await Welcome();
     await my_Todo();
 }
@@ -30,7 +34,7 @@ async function todo() {
     let todo_Options = await inquirer.prompt({
         name: "Options",
         type: "list",
-        message: "Please select an Otion from below : ",
+        message: "Please select an Option from below : ",
         choices: ["Add", "Delete", "Update", "View", "Exit"],
     });
     if (todo_Options.Options === "Add") {
@@ -40,7 +44,7 @@ async function todo() {
         await view_Task();
     }
     else if (todo_Options.Options === "Exit") {
-        console.log("Please come back for more shopping");
+        console.log(chalk.blue("Please come back for more shopping"));
         condition = false;
     }
     else if (todo_Options.Options === "Delete") {
@@ -117,4 +121,4 @@ async function update_Task() {
         console.log(chalk.green(`and You updated it with =>  ${Task.Add}`));
     }
 }
-program();
+store();
