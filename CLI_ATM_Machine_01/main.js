@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 // login in as default or register as new user {done} but give default value to account {done}
 // select method of cash ex: withdraw , fast cash , balance inquiry , exit {done}
 // withdraw should be less than balance {done}
