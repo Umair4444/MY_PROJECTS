@@ -1,6 +1,6 @@
 {
   "name": "todo_list_by_umair",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Command line program for shopping",
   "main": "index.js",
   "type": "module",
