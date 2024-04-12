@@ -8,3 +8,8 @@ npx cli_guessing_game_by_umair
 
 TODO_LIST_00
 npx todo_list_by_umair
+
+CLI_ATM_Machine_01
+npx cli_atm_machine_by_umair
+
+CLI_CURRENCY_ CONVERTER_00
